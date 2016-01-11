@@ -49,7 +49,7 @@ $(window).load(function() {
       timesPauseSkipped++;
       localStorage.setItem(LS_NOTCP_INDEX_KEY, timesPauseSkipped);
     } else if (c && c.length > 0 && (timesPauseSkipped == noTcpThreshold)) {
-      c.one("click", function() {
+      $('.player-autoplay-interrupter').one("click", function() {
         localStorage.setItem(LS_NOTCP_INDEX_KEY, 0); // reset
       });
     }
